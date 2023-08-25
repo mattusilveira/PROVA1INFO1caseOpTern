@@ -11,11 +11,27 @@
     */
 
     //Entrada
+    const lab = prompt("Qual Laboratório de Informática deseja utilizar: B1, B2, B3 ou B4?").trim().replace(",", ".");
 
-    
     //Processamento
+    switch (lab) {
+        case "B1":
+            alert("Laboratório B1: 20 computadores.");
+            break;
+        case "B2":
+            alert("Laboratório B2: 24 computadores.");
+            break;
+        case "B3":
+            alert("Laboratório B3: 40 computadores.");
+            break;
+        case "B4":
+            alert("Laboratório B4: 16 computadores.");
+            break;
+        default:
+            alert("Opção inválida");
+            break;
+    }
 
-    
     //Saída
 
     /*

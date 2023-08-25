@@ -13,11 +13,42 @@
     */
 
     //Entrada
+    const beb = prompt("Insira uma das opções de bebidas: Refrigerante (RF), Suco (SU), Água (AG), Café (CF).").trim().replace(",", ".");
+    const qnt = Number(prompt("Insira a quantidade que deseja comprar:").trim().replace(",", "."));
+    let cnt = 0;
 
-    
     //Processamento
+    switch (beb) {
+        case "RF":
+            cnt = qnt * 6.19;
+            if (cnt > 150) {
+                cnt = cnt * 0.9;
+            }
+            alert(`O custo total será: R$${cnt.toFixed(2)}`);
+            break;
+        case "SU":
+            cnt = qnt * 9.80;
+            if (cnt > 150) {
+                cnt = cnt * 0.9;
+            }
+            alert(`O custo total será: R$${cnt.toFixed(2)}`);
+            break;
+        case "AG":
+            cnt = qnt * 5;
+            if (cnt > 150) {
+                cnt = cnt * 0.9;
+            }
+            alert(`O custo total será: R$${cnt.toFixed(2)}`);
+            break;
+        case "CF":
+            cnt = qnt * 10;
+            if (cnt > 150) {
+                cnt = cnt * 0.9;
+            }
+            alert(`O custo total será: R$${cnt.toFixed(2)}`);
+            break;
+    }
 
-    
     //Saída
 
 

@@ -13,14 +13,16 @@
     */
 
     //Entrada
+    const diasAtraso = Number(prompt("Insira com quantos dias de atraso a sua conta foi paga?").trim().replace(",","."));
 
-    
     //Processamento
-
-    
+    (diasAtraso == 0) ? alert(`A multa será de R$ 0,00.`) :
+        (diasAtraso <= 10) ? alert(`A multa será de R$ 2,50 o dia, O custo total será : R$${(diasAtraso * 2.50)}.`) :
+            (10 < diasAtraso <= 20) ? alert(`A multa será de R$ 4,00 o dia, O custo total será : R$${(diasAtraso * 4.00)}.`) :
+                (diasAtraso > 20) ? alert(`a multa será de R$ 4,50 o dia, O custo total será : R$${(diasAtraso * 4.50)}.`) : alert("Resposta Invalida");
     //Saída
 
-    
+
     /*
     Para testar:
     Entrada: Dias de atraso

@@ -11,11 +11,13 @@
     */
 
     //Entrada
-
-
+    const preço = Number(prompt("Informe o preço do Tablet que deseja comprar:").trim().replace(",", "."));
+    const prc = Number(prompt("Informe também a quantidade de parcelas que deseja financiar:").trim().replace(",", "."));
     //Processamento
+    (prc == 1) ? alert(`Não terá diferença no preço.`) :
+        (prc <= 5) ? alert(`O juro a ser aplicado será de 3% sobre o preço do Tablet. o preço final do Tablet será: R$${preço * (3 / 100) + preço}.`) :
+            (prc > 5) ? alert(`O juro a ser aplicado será de 7%  sobre o preço do Tablet. o preço final do Tablet será: R$${preço * (7 / 100) + preço}.`) : alert("Opção Inválida!!!");
 
-    
     //Saída
 
     /*
